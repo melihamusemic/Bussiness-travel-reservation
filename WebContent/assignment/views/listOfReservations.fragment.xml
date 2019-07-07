@@ -1,0 +1,63 @@
+<core:FragmentDefinition xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	<Dialog id="listDialog" contentWidth="500px">
+		<customHeader>
+			<Bar>
+				<contentLeft>
+					<Button type="Back" press=".onCloseDialog" />
+				</contentLeft>
+				<contentMiddle>
+					<Text text="{i18n>listTitle}" />
+				</contentMiddle>
+			</Bar>
+		</customHeader>
+		<content>
+			<List noDataText="{i18n>noData}" items="{/travels}"
+				id="travelList">
+				<items>
+					<CustomListItem>
+						<VBox>
+							<HBox>
+								<Label design="Bold" text="{i18n>travelTo}"
+									class="travel-font sapUiTinyMarginTop" />
+								<Label design="Bold" text=": " class="travel-font sapUiTinyMarginTop sapUiTinyMarginEnd" />
+								<Label design="Bold" text="{destination}"
+									class="travel-font sapUiTinyMarginTop" />
+							</HBox>
+							<HBox>
+								<Label design="Bold" text="{i18n>status}"
+									class="label-width" />
+								<Label text="{status}" />
+							</HBox>
+							<HBox>
+								<Label design="Bold" text="{i18n>start}"
+									class="label-width" />
+								<Label text="{start}" />
+							</HBox>
+							<HBox>
+								<Label design="Bold" text="{i18n>end}" class="label-width" />
+								<Label text="{end}" />
+							</HBox>
+							<HBox>
+								<Label design="Bold" text="{i18n>hotel}"
+									class="label-width" />
+								<Label text="{hotel/name}" />
+								<Label text=", " class="sapUiTinyMarginEnd" />
+								<Label text="{hotel/address}" />
+							</HBox>
+							<HBox>
+								<Label design="Bold" text="{i18n>transport}"
+									class="label-width" />
+								<Label text="{transport}" />
+							</HBox>
+							<HBox>
+								<Label design="Bold" text="{i18n>paid}" class="paid-width" />
+								<CheckBox selected="{paid}" editable="false" />
+							</HBox>
+						</VBox>
+					</CustomListItem>
+				</items>
+			</List>
+		</content>
+	</Dialog>
+</core:FragmentDefinition>

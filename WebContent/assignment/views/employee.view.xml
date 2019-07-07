@@ -1,0 +1,44 @@
+<core:View xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+	controllerName="assignment.controllers.employee"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page id="employeepage">
+		<customHeader>
+			<Bar>
+			<contentMiddle>
+			<Label id="employeeTitle"/>
+			</contentMiddle>
+				<contentRight>
+					<Button icon="sap-icon://log" press="onLogout"/>
+				</contentRight>
+			</Bar>
+		</customHeader>
+		<content>
+			<VBox alignItems="Center" justifyContent="Center"
+				fitContainer="true">
+				<Label class="travel-font sapUiMediumMarginBottom"
+					text="{i18n>fillData}" />
+				<Input placeholder="{i18n>destination}" width="15rem" id="destinationid"/>
+				<HBox>
+					<Label text="{i18n>start}" class="sapUiSmallMargin" />
+					<Input type="Date" width="11rem" id="startid"/>
+				</HBox>
+				<HBox>
+					<Label text="{i18n>end}"
+						class="sapUiSmallMarginEnd sapUiSmallMargin" />
+					<Input type="Date" width="11rem" id="endid"/>
+				</HBox>
+
+				<Button text="{i18n>send}" width="15rem" type="Emphasized" press=".onSend" />
+			</VBox>
+		</content>
+		<footer>
+			<Bar>
+				<contentRight>
+					<Button text="{i18n>listOfReservations}" press=".onOpenDialog" />
+				</contentRight>
+
+			</Bar>
+		</footer>
+	</Page>
+</core:View>

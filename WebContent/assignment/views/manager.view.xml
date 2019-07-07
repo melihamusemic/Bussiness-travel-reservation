@@ -1,0 +1,61 @@
+<core:View xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+	controllerName="assignment.controllers.manager"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page>
+		<customHeader>
+			<Bar>
+				<contentMiddle>
+					<Label id="managerTitle" text="List of bussiness travels" />
+				</contentMiddle>
+				<contentRight>
+					<Button icon="sap-icon://log" press="onLogout" />
+				</contentRight>
+			</Bar>
+		</customHeader>
+		<content>
+			<List noDataText="{i18n>noData}" items="{/travels}"
+				id="requestList">
+				<items>
+					<CustomListItem>
+						<Panel>
+							<VBox>
+								<HBox>
+									<Label design="Bold" text="{i18n>travelTo}"
+										class="travel-font sapUiSmallMarginTopBottom" />
+									<Label design="Bold" text=": "
+										class="travel-font sapUiSmallMarginTopBottom  sapUiTinyMarginEnd" />
+									<Label design="Bold" text="{destination}"
+										class="travel-font sapUiSmallMarginTopBottom" />
+								</HBox>
+								<HBox>
+									<Label design="Bold" text="{i18n>employee}"
+										class="label-width" />
+									<Label text="{employee/name}" />
+								</HBox>
+								<HBox>
+									<Label design="Bold" text="{i18n>start}"
+										class="label-width" />
+									<Label text="{start}" />
+								</HBox>
+								<HBox>
+									<Label design="Bold" text="{i18n>end}"
+										class="label-width" />
+									<Label text="{end}" />
+								</HBox>
+								<HBox>
+									<Button text="Allow" type="Accept"
+										class="sapUiLargeMarginEnd sapUiSmallMarginTop sapUiLargeMarginBottom"
+										press=".onAllow" />
+									<Button text="Reject" type="Reject"
+										class="sapUiSmallMarginTop sapUiLargeMarginBottom"
+										press=".onReject" />
+								</HBox>
+							</VBox>
+						</Panel>
+					</CustomListItem>
+				</items>
+			</List>
+		</content>
+	</Page>
+</core:View>

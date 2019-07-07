@@ -1,0 +1,90 @@
+<core:View xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+	controllerName="assignment.controllers.admin"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page>
+		<customHeader>
+			<Bar>
+				<contentMiddle>
+					<Label id="adminTitle" text="List of bussiness travels" />
+				</contentMiddle>
+				<contentRight>
+					<Button icon="sap-icon://log" press="onLogout" />
+				</contentRight>
+			</Bar>
+		</customHeader>
+		<content>
+			<List noDataText="{i18n>noData}" items="{/travels}"
+				id="requestList">
+				<items>
+					<CustomListItem>
+						<Panel>
+							<VBox>
+								<HBox>
+									<Label design="Bold" text="{i18n>travelTo}"
+										class="travel-font sapUiSmallMarginTopBottom" />
+									<Label design="Bold" text=": "
+										class="travel-font sapUiSmallMarginTopBottom  sapUiTinyMarginEnd" />
+									<Label design="Bold" text="{destination}"
+										class="travel-font sapUiSmallMarginTopBottom" />
+								</HBox>
+								<HBox>
+									<Label design="Bold" text="{i18n>employee}"
+										class="label-width" />
+									<Label text="{employee/name}" />
+								</HBox>
+								<HBox>
+									<Label design="Bold" text="{i18n>start}"
+										class="label-width" />
+									<Label text="{start}" />
+								</HBox>
+								<HBox>
+									<Label design="Bold" text="{i18n>end}"
+										class="label-width" />
+									<Label text="{end}" />
+								</HBox>
+								<HBox>
+									<Label text="{i18n>makeReservation}" design="Bold"
+										class="travel-font sapUiMediumMarginTop sapUiSmallMarginBottom"></Label>
+								</HBox>
+								<HBox>
+									<Label design="Bold" text="{i18n>hotel}" />
+								</HBox>
+								<HBox>
+									<Label text="{i18n>hotelName}" width="120px"
+										class="sapUiTinyMarginTop" />
+									<Input class="input-font" />
+									<Label text="{i18n>hotelAddress}" width="120px"
+										class="sapUiTinyMarginTop sapUiLargeMarginBegin sapUiTinyMarginEnd" />
+									<Input class="input-font" />
+								</HBox>
+								<HBox>
+									<Label design="Bold" text="{i18n>transport}"
+										width="120px" class="sapUiTinyMarginTop" />
+									<Input class="input-font" />
+								</HBox>
+								<HBox>
+									<Label design="Bold" text="{i18n>paid}" width="110px"
+										class="sapUiSmallMarginTop" />
+									<CheckBox />
+								</HBox>
+								<HBox>
+									<Label design="Bold" text="{i18n>documentation}"
+										width="110px" class="sapUiSmallMarginTop" />
+									<CheckBox />
+								</HBox>
+								<HBox>
+									<Label design="Bold" text="{i18n>insurance}"
+										width="110px" class="sapUiSmallMarginTop" />
+									<CheckBox />
+								</HBox>
+								<Button text="{i18n>save}" type="Emphasized"
+									press=".onSave" class="align-right" />
+							</VBox>
+						</Panel>
+					</CustomListItem>
+				</items>
+			</List>
+		</content>
+	</Page>
+</core:View>

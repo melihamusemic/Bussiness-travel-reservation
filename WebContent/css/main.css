@@ -1,0 +1,29 @@
+.travel-font {
+	font-size: 20px !important;
+}
+
+.font {
+	font-size: 30px !important;
+}
+
+.btn {
+	height: 25px !important;
+}
+
+.label-width {
+	width: 85px !important; 
+}
+
+.input-font {
+	font-size: 10px !important;
+	height: 22px !important;
+}
+
+.align-right {
+  margin-left: 85% !important;
+}
+
+.paid-width {
+	width: 70px !important;
+	margin-top: 15px; 
+}

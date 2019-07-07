@@ -1,0 +1,18 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+		controllerName="assignment.controllers.login" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page>
+		<content>
+	<VBox alignItems="Center" justifyContent="Center" fitContainer="true">
+	<Label class="font sapUiMediumMarginBottom" text="{i18n>signIn}"/>
+	<HBox>				  
+	<Input placeholder="{i18n>email}" type="Email" width="15rem" id="email"/>
+	</HBox>
+	<HBox>
+	<Input placeholder="{i18n>password}" type="Password" width="15rem" class="sapUiSmallMarginBottom" id="password"/>
+	</HBox>
+	<Button text="{i18n>signinButton}" width="15rem" type="Emphasized" press="onSignin"/>
+	<Button text="{i18n>noaccount}" width="17rem" type="Transparent" press=".onPress" class="btn"/>
+	</VBox>
+		</content>
+	</Page>
+</core:View>
